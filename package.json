@@ -1,0 +1,54 @@
+{
+  "name": "webpackTemplet",
+  "version": "1.0.0",
+  "description": "h5多页面打包配置",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "ENV_FLAG=dev webpack-dev-server --config ./webpack/webpack.dev.js",
+    "build:test": "ENV_FLAG=test webpack --config ./webpack/webpack.prod.js",
+    "build:prod": "ENV_FLAG=prod webpack --config ./webpack/webpack.prod.js"
+  },
+  "pre-commit": [
+    "lint:fix"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hfimy/webpackTemplet.git"
+  },
+  "keywords": [],
+  "author": "hfimy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hfimy/webpackTemplet/issues"
+  },
+  "homepage": "https://github.com/Hfimy/webpackTemplet#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.8.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-pxtorem": "^4.0.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.14.3",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
